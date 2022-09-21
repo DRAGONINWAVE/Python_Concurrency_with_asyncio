@@ -10,7 +10,7 @@ async def main():
     async with aiohttp.ClientSession() as session:
         urls = ['https://example.com' for _ in range(10000)]
         requests = [fetch_status(session, url) for url in urls]
-        status_code = await asyncio.gether(*requests)
+        status_code = await asyncio.gather(*requests)
         print(status_code)
 
 asyncio.run(main())
