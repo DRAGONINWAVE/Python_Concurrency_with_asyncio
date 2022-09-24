@@ -28,8 +28,8 @@ def add_rows(original_excel, standard_excel):
 
 
 def main():
-    data = pd.read_excel(r'D:\\piles\\20220617.xlsx')
-    data1 = pd.read_excel(r'D:\\piles\\timetamp.xlsx')
+    data = pd.read_excel(r'D:\\piles\\20220617.xlsx', header=1000)
+    data1 = pd.read_excel(r'D:\\piles\\timetamp.xlsx', header=1000)
     print(data1.shape)
     data_add_row = add_rows(data, data1)
     print(data_add_row.shape)
