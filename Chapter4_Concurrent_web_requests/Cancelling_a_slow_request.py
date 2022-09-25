@@ -1,6 +1,7 @@
 import asyncio
 import aiohttp
 from Using_as_completed import fetch_status
+from A_decorator_for_timing_coroutine import async_timed
 
 
 async def main():
