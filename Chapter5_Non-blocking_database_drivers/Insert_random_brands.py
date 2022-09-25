@@ -10,7 +10,7 @@ def load_common_words() -> List[str]:
         return common_words.readlines()
 
 
-def generate_brand_names(words: List[str]) -> List[Tuple[Union[str, ]]]:
+def generate_brand_names(words: List[str]) -> List[Tuple[Union[str, None]]]:
     return [(words[index],) for index in sample(range(100), 100)]
 
 
