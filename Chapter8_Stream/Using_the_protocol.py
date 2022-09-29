@@ -14,6 +14,7 @@ async def make_request(host: str, port: int, loop: AbstractEventLoop) -> str:
 
 async def main():
     loop = asyncio.get_running_loop()
-    result = await make_request('www.baidu.com', 80, loop)
+    result = await make_request('www.example.com', 80, loop)
+    print(result)
 
 asyncio.run(main())
