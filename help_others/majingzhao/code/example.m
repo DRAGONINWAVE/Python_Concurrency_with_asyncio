@@ -20,10 +20,9 @@
 %
 %
 
-x = load('G:\liang\sedissi.dat');	% remove the remarks in the file first.
-
+x = load('G:\liang\sedissi.dat'); % remove the remarks in the file first.
 range = 1:360;
-t = x(range,1);
+t = x(range, 1);
 x1 = x(range, 2);
 x2 = x(range, 3);
 
@@ -32,16 +31,12 @@ dt = t(2) - t(1);
 [T21, err90_21, err95_21, err99_21] = causality_est(x1, x2, 1);
 [T12, err90_12, err95_12, err99_12] = causality_est(x2, x1, 1);
 
-T21 = T21/dt;
-T12 = T12/dt;
-
-
+T21 = T21 / dt;
+T12 = T12 / dt;
 
 %%%%%% The following is a test of tau_est...  %%%%%%%%
 %%%%%% tau21 = 5.47%,  tau12 = -0.096%
 
 [tau21, dH1_star, dH1_noist] = tau_est(x1, x2, 1);
 [tau12, dH2_star, dH2_noist] = tau_est(x2, x1, 1);
-	% tau21 & tau12 are in [-1 1]
-
-
+% tau21 & tau12 are in [-1 1]
