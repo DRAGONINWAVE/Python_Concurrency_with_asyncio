@@ -1,4 +1,3 @@
-import asyncio
 from aiohttp import web
 from aiohttp.web_app import Application
 from aiohttp.web_request import Request
