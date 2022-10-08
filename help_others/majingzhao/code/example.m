@@ -21,6 +21,7 @@
 %
 
 x = load('G:\liang\sedissi.dat'); % remove the remarks in the file first.
+
 range = 1:360;
 t = x(range, 1);
 x1 = x(range, 2);
